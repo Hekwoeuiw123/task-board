@@ -74,7 +74,7 @@ const Board = () => {
 
     dispatch(updateTaskStatus({id : draggableId , newStatus: destination.droppableId}))
 
-    const movedTask = tasks.filter(task => task.id === draggableId)
+    const movedTask = tasks.find(task => task.id === draggableId)
     dispatch(addLogs(`Task '${movedTask?.title}' moved to ${destination.droppableId}`))
 
   }
