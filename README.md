@@ -2,7 +2,7 @@
 
 A high-performance, fully persistent Kanban Task Board built with React and Redux Toolkit. This application was developed as a React Js Developer assessment for Hintro, focusing on architecture, state management, and user experience.
 
-**Live Demo:** [Insert Vercel/Netlify Link Here]
+**Live Demo:** 
 
 ##  Static Login Credentials
 To access the application, please use the following hardcoded credentials:
@@ -53,5 +53,5 @@ Follow these steps to run the application locally:
 
 **1. Clone the repository (or extract the ZIP file):**
 ```bash
-git clone <repository-url>
+git clone https://github.com/Hekwoeuiw123/task-board.git
 cd task-board
