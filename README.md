@@ -2,7 +2,7 @@
 
 A high-performance, fully persistent Kanban Task Board built with React and Redux Toolkit. This application was developed as a React Js Developer assessment for Hintro, focusing on architecture, state management, and user experience.
 
-**Live Demo:** 
+**Live Demo:**  https://trello-likeapp.netlify.app/
 
 ##  Static Login Credentials
 To access the application, please use the following hardcoded credentials:
