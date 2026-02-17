@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import Board from './pages/Board.jsx'
 import PrivateRoute from './routes/PrivateRoute.jsx'
+import PublicRoute from './routes/GuestRoute.jsx'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 import Login from './pages/Login.jsx'
 import Page404 from './pages/Page404.jsx'
@@ -14,15 +15,16 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<App />}>
-        {/* Index route for "/" */}
-        <Route index element={<Login />} />
 
-        {/* Public Route */}
-        <Route path="/login" element={<Login />} />
+        {/* PUBLIC ROUTES: Only accessible if LOGGED OUT */}
+        <Route element={<PublicRoute />}>
+          <Route index element={<Login />} />
+          <Route path="/login" element={<Login />} />
+        </Route>
 
-        {/* Protected Route */}
+        {/* PRIVATE ROUTES: Only accessible if LOGGED IN */}
         <Route element={<PrivateRoute />}>
-          <Route path='/board' element={<Board />} />
+          <Route path="/board" element={<Board />} />
         </Route>
 
         {/* 404 Route */}
